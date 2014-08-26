@@ -46,8 +46,8 @@ public class NotificationSender extends Activity {
     	
     	Intent intent = new Intent(this, NotificationReciever.class);
     	PendingIntent activity = PendingIntent.getActivity(this, 0, intent, 0);
-    	notification.setLatestEventInfo(this, "This is the title", "This is the text", activity);
     	notification.number ++;
+    	notification.setLatestEventInfo(this, "You have " + notification.number + " notifications", "from the same Button :)", activity);
     	
     	notificationManager.notify(0, notification);
     }
